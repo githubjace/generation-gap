@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg: #0c0a16;
+}
+
+html,
+body {
+  background-color: var(--bg);
+  color: #f4f1ff;
+  min-height: 100dvh;
+}
+
+body {
+  font-family: var(--font-body), system-ui, sans-serif;
+  background-image:
+    radial-gradient(60rem 30rem at 100% -10%, rgba(193, 75, 255, 0.14), transparent 60%),
+    radial-gradient(50rem 30rem at -10% 110%, rgba(61, 123, 255, 0.14), transparent 60%);
+  background-attachment: fixed;
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+input,
+button {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+input:focus-visible {
+  outline-color: #ff4fa3;
+}
+
+.title-retro {
+  color: #ffffff;
+  text-shadow:
+    3px 3px 0 #ff4fa3,
+    6px 6px 0 #3d7bff;
+}
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-spin {
+    animation-duration: 2.5s;
+  }
+}
